@@ -1,0 +1,258 @@
+/* Importar la fuente blacklisted */
+@font-face {
+    font-family: 'Blacklisted';
+    src: url('/fonts/Blacklisted.ttf') format('truetype');
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    width: 95%;
+    margin: 0 auto;
+    background-color: #000000;
+    background-image: url('/img/Logo.jpg');
+    background-size: 95%;
+    background-repeat: repeat-y;
+    background-position: center top;
+}
+
+/* Header */
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo centrado */
+.logo-container {
+    position: absolute;
+}
+
+.logo {
+    width: 110px;
+    height: auto;
+}
+
+/* Nombre de la banda a la derecha del logo */
+.name-container {
+    position: relative;
+    margin-left: 90px;
+    bottom: 20px;
+}
+
+.name-image {
+    margin-top: 35px;
+    width: 500px;
+    height: auto;
+    transition: transform 0.3s; /* Transición suave para el cambio de tamaño */
+}
+
+.name-container:hover .name-image {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
+}
+
+/* Navegacion a la izquierda */
+nav {
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Blacklisted', sans-serif;
+    font-weight: bold;
+    font-size: 30px; /* Tamaño de fuente aumentado */
+    display: flex; /* Permite que el texto se centre verticalmente */
+    align-items: center; /* Alinea el texto verticalmente en el centro */
+    transition: transform 0.3s; /* Transición suave para el cambio de tamaño */
+}
+
+nav ul li a:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al 110% */
+}
+
+/* Contenedor de información */
+.info-container {
+    color: #ffffff;
+    text-align: center;
+    margin: 120px auto;
+    font-size: 35px;
+    margin-bottom: 30px;
+    background-color: #00000082;
+}
+
+/* Contenedor de imágenes */
+.container-images {
+    position: relative;
+    width: 100%;
+    background-color: #00000049;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+}
+
+.section {
+    margin: 2em 0;
+    padding: 0 1em;
+    position: relative;
+}
+
+.images {
+    display: flex;
+    overflow-x: auto; /* Permite el scroll horizontal dentro del contenedor */
+    padding-bottom: 1em; /* Espacio para los botones de scroll */
+    scroll-behavior: smooth;
+    white-space: nowrap; /* Mantiene las imágenes en una sola línea */
+}
+
+/* Oculta la barra de desplazamiento en navegadores WebKit (Chrome, Safari) */
+.images::-webkit-scrollbar {
+    display: none;
+}
+
+.images img {
+    display: inline-block;
+    margin: 10px;
+    width: auto; /* Ajusta el ancho de las imágenes */
+    height: 300px;
+    cursor: pointer; /* Cambia el cursor cuando se pasa sobre la imagen */
+    transition: transform 0.3s ease; /* Añade una animación suave */
+}
+
+.images img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el cursor */
+}
+
+/* Botones de scroll */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: rgb(255, 255, 255);
+    width: 100px; /* Ajusta el ancho del botón */
+    height: 100px; /* Ajusta la altura del botón */
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+    height: 20%; /* Asegura que el botón cubra toda la altura del contenedor */
+    display: flex;
+    align-items: center; /* Alinea el icono verticalmente en el centro */
+    justify-content: center; /* Centra el icono horizontalmente */
+}
+
+.scroll-button i {
+    font-size: 80px; /* Tamaño del ícono */
+}
+
+.scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll-button.left {
+    left: 0;
+}
+
+.scroll-button.right {
+    right: 0;
+}
+
+/* Estilos de la imagen en pantalla completa */
+.fullscreen-img {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.fullscreen-img img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Redes sociales */
+.social-media {
+    position: fixed; /* Fija la posición en la pantalla */
+    bottom: 20px; /* Distancia desde la parte inferior de la ventana */
+    right: 0px; /* Distancia desde el borde derecho de la ventana */
+    text-align: center;
+    z-index: 1000; /* Asegura que esté sobre el footer */
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.4);
+}
+
+/* Plataformas musicales */
+.platforms-container {
+    position: fixed; /* Fija la posición en la pantalla */
+    bottom: 15px; /* Distancia desde la parte inferior de la ventana */
+    left: 0px; /* Distancia desde el borde derecho de la ventana */
+    text-align: center;
+    z-index: 1000; /* Asegura que esté sobre el footer */
+}
+
+.platforms-title {
+    font-family: 'Blacklisted', sans-serif; /* Usar la fuente Blacklisted */
+    font-size: 15px;
+    margin-bottom: 0px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.727);
+    border-radius: 20px;
+}
+
+.platforms-image {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Footer fijo */
+footer {
+    font-family: 'Blacklisted', sans-serif; /* Usar la fuente Blacklisted */
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    font-size: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    color: #fff;
+}

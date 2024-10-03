@@ -1,0 +1,229 @@
+/* Importar la fuente blacklisted */
+@font-face {
+    font-family: 'Blacklisted';
+    src: url('/fonts/Blacklisted.ttf') format('truetype');
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #000000;
+    background-image: url('/img/Logo.jpg');
+    background-size: 95%;
+    background-repeat: repeat-y;
+    background-position: center top;
+}
+
+/* Header */
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0%;
+    z-index: 1000;
+}
+
+/* Logo centrado */
+.logo-container {
+    position: absolute;
+}
+
+.logo {
+    width:110px;
+    height: auto;
+}
+
+/* Nombre de la banda a la derecha del logo */
+.name-container {
+    position: relative;
+    margin-left: 90px;
+    bottom: 20px;
+}
+
+.name-image {
+    margin-top: 35px;
+    width: 500px;
+    height: auto;
+    transition: transform 0.3s; /* Transición suave para el cambio de tamaño */
+}
+
+.name-container:hover .name-image {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
+}
+
+/* Navegacion a la izquierda */
+nav {
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Blacklisted', sans-serif;
+    font-weight: bold;
+    font-size: 30px; /* Tamaño de fuente aumentado */
+    overflow: hidden; /* Evita que los elementos desborden el header */
+    display: flex; /* Permite que el texto se centre verticalmente */
+    align-items: center; /* Alinea el texto verticalmente en el centro */
+    transition: transform 0.3s; /* Transición suave para el cambio de tamaño */
+}
+
+nav ul li a:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al 110% */
+}
+
+/* Contenedor de información */
+.info-container {
+    position: relative;
+    width: 100%; /* Ajusta el ancho del contenedor al 100% */
+    color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 120px auto 200px; /* Centra horizontalmente con auto y espacio superior e inferior */
+    background-color: rgba(0, 0, 0, 0.348); /* Fondo oscuro con opacidad */
+}
+
+/* Estilo para los encabezados dentro del contenedor de información */
+.info-container h1 {
+    text-align: center; /* Centra los encabezados */
+    font-size: 40px;
+}
+
+/* Estilo para los párrafos dentro del contenedor de información */
+.info-container p {
+    font-size: 35px; /* Tamaño de fuente de los párrafos */
+    text-align: justify; /* Justifica el texto en los párrafos */
+    line-height: 1.5; /* Ajusta este valor para más o menos espacio entre líneas */
+}
+
+/* Contenedor de integrantes */
+.integrantes-container {
+    display: flex; /* Usa flexbox para el diseño */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    margin: 20px 0; /* Espacio superior e inferior */
+    font-family: 'Blacklisted';
+}
+
+/* Estilo para cada integrante */
+.integrante {
+    flex: 0 0 45%; /* Cada integrante ocupa el 45% del ancho disponible */
+    text-align: center; /* Centra el texto dentro del contenedor del integrante */
+    margin: 10px; /* Espacio entre los integrantes */
+    display: flex;
+    flex-direction: column; /* Alinea el texto y la imagen en columna */
+    align-items: center; /* Centra horizontalmente los elementos dentro del contenedor del integrante */
+}
+
+/* Estilo para los párrafos dentro del contenedor de cada integrante */
+.integrante p {
+    margin-bottom: 5px; /* Espacio inferior del texto */
+    line-height: 1.2; /* Mejora la legibilidad */
+}
+
+/* Estilo para las imágenes de los integrantes */
+.integrante img {
+    height: 400px; /* Mantiene la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Contenedor de medios */
+.medios-container {
+    display: flex; /* Usa flexbox para el diseño */
+    justify-content: space-around; /* Distribuye los elementos con espacio igual */
+    margin: 20px 0; /* Espacio superior e inferior */
+}
+
+/* Estilo para los enlaces dentro del contenedor de medios */
+.medios-container a {
+    text-align: center; /* Centra el contenido dentro de los enlaces */
+}
+
+/* Estilo para las imágenes dentro del contenedor de medios */
+.medios-container img {
+    width: 200px; /* Ancho fijo para las imágenes */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+    transition: transform 0.3s; /* Agrega una transición suave para el efecto de transformación */
+}
+
+/* Estilo para las imágenes al pasar el cursor sobre ellas */
+.medios-container img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al 110% */
+}
+
+/* Redes sociales */
+.social-media {
+    position: fixed; /* Fija la posición en la pantalla */
+    bottom: 20px; /* Distancia desde la parte inferior de la ventana */
+    right: 0; /* Distancia desde el borde derecho de la ventana */
+    text-align: center;
+    z-index: 1000; /* Asegura que esté sobre el footer */
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.4);
+}
+
+/* Plataformas musicales */
+.platforms-container {
+    position: fixed; /* Fija la posición en la pantalla */
+    bottom: 15px; /* Distancia desde la parte inferior de la ventana */
+    left: 0; /* Distancia desde el borde izquierdo de la ventana */
+    text-align: center;
+    z-index: 1000; /* Asegura que esté sobre el footer */
+}
+
+.platforms-title {
+    font-family: 'Blacklisted', sans-serif; /* Usar la fuente Blacklisted */
+    font-size: 15px;
+    margin-bottom: 0px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.727);
+    border-radius: 20px;
+}
+
+.platforms-image {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Footer fijo */
+footer {
+    font-family: 'Blacklisted', sans-serif; /* Usar la fuente Blacklisted */
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0; /* Alinea el footer con el borde izquierdo de la ventana */
+    z-index: 1000;
+    color: #fff;
+}
